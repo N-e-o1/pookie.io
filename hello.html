@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>a niggas bd </title>
+
+  </head>
+  <style>
+    body{
+        background-image: url('tay.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        margin:0;
+        display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button   {
+        background-color: black;
+        border-radius: 10%;
+        border-color: black;
+        height: 40px;
+        width:60px;
+        color:white;
+    }
+    div {
+          text-align: center;
+        }
+    
+    button:hover{
+        background-color:rgb(75, 83, 129);
+        height:80px;
+        width:80px;
+        border-radius: 40%;
+        cursor: pointer;}
+    </style>
+<body>
+  <form id="nameForm" action="tay.html" onsubmit="return verif()">
+    <div>
+    
+        <label for="username">wach esmk azin: </label>
+    <input type="text" id="username" /><br><br>
+
+    <label for="date">Enter today's date yal9lawi: </label>
+      <input type="date" id="date" />
+      <br><br>
+        <button type="submit">Proceed</button>
+    </div>
+    
+    
+  </form>
+
+<script>
+    function verif() {
+      // get input value
+      let input = document.getElementById('username').value.trim().toLowerCase();
+      let v = true;
+    
+      // get date value
+      let datee = document.getElementById('date').value;
+    
+      if (input === "anes" && datee === "2024-09-14") {
+        alert("welcome cutie pie , wachhhh hedha date machi lyoum??");
+        v = true;  // allow submit -> go to tay.html
+      } else if (input != "anes") {   // ✅ fixed
+        alert("access denied ❌ , enta chkoun al9lawii");
+        v = false; // block submit
+      } else if (datee != "2024-09-14") {   // ✅ fixed
+        alert("nigga u blind whats the date goddayumm");
+        v = false;
+      }
+    
+      return v; // ✅ always return at the end
+    }
+</script>
+
+
+</body>
+</html>
